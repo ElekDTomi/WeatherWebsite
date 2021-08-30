@@ -1,0 +1,17 @@
+{
+    "name": "burek/weather-website",
+    "autoload": {
+        "psr-4": {
+            "Burek\\WeatherWebsite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KoboldBurek",
+            "email": "elekdtomi@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}

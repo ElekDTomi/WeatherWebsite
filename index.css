@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 26);
+}
+
+.t-weatherbox {
+  filter: blur(2px) brightness(70%);
+  width: 600px;
+  height: 100vh;
+  position: relative;
+}
+
+.t-thunderstormbg {
+  background-image: url("images/storm.jpg");
+  background-repeat: no-repeat;
+  background-position: 40%;
+  background-size: cover;
+}
+
+.t-drizzlebg {
+  background-image: url("images/drizzle.jpg");
+  background-repeat: no-repeat;
+  background-position: 40%;
+  background-size: cover;
+}
+
+.t-rainbg {
+  background-image: url("images/rain.jpg");
+  background-repeat: no-repeat;
+  background-position: 40%;
+  background-size: cover;
+}
+
+.t-sunbg {
+  background-image: url("images/sun.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 100%;
+  background-size: cover;
+}
+
+.t-clearmoonbg {
+  background-image: url("images/clearmoon.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 10%;
+  background-size: cover;
+}
+
+.t-cloudbg {
+  background-image: url("images/raincloud.webp");
+  background-repeat: no-repeat;
+  background-position: 40%;
+  background-size: cover;
+}
+
+.t-cloudmoonbg {
+  background-image: url("images/cloudmoon.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 100%;
+  background-size: cover;
+}
+
+.t-weatherinfo {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  z-index: 15;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+
+.t-controlbar {
+  height: 55px;
+  width: 605px;
+  z-index: 16;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.63);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.t-welcomemsg {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  line-height: 60px;
+  margin-left: 25px;
+  font-size: 30px;
+  float: left;
+  text-shadow: 2px 2px 2px black;
+}
+
+.t-time {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  line-height: 60px;
+  margin-right: 25px;
+  font-size: 30px;
+  float: right;
+  text-shadow: 2px 2px 2px black;
+}
+
+.t-city {
+  color: White;
+  text-shadow: 3px 3px 2px black;
+  font-size: 50px;
+  padding-top: 70px;
+}
+
+.t-weathertxt {
+  color: White;
+  text-shadow: 2px 2px 2px black;
+  font-size: 35px;
+  padding: 10px 0px 10px 0px;
+}
+
+.t-temperaturecontainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-temperature {
+  color: White;
+  text-shadow: 3px 3px 2px black;
+  font-size: 80px;
+}
+
+.t-minmax {
+  margin-left: 15px;
+}
+
+.t-mintemperature {
+  color: White;
+  text-shadow: 2px 2px 2px black;
+  font-size: 30px;
+  border-bottom: 3px solid white;
+}
+
+.t-maxtemperature {
+  color: White;
+  text-shadow: 2px 2px 2px black;
+  font-size: 30px;
+}
+
+.t-etcinfo {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid rgb(207, 207, 207);
+}
+
+.t-humidity {
+  display: flex;
+  justify-content: center;
+  padding-right: 15px;
+  border-right: 2px solid white;
+}
+
+.t-humidityimg {
+  height: 50px;
+  line-height: 50px;
+  filter: invert(98%) sepia(5%) saturate(605%) hue-rotate(155deg)
+    brightness(117%) contrast(100%);
+}
+
+.t-humiditytext {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.t-air-pressure {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.t-air-pressureimg {
+  height: 50px;
+  line-height: 50px;
+  filter: invert(98%) sepia(5%) saturate(605%) hue-rotate(155deg)
+    brightness(117%) contrast(100%);
+}
+
+.t-air-pressuretext {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.t-sunmoon {
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid rgb(207, 207, 207);
+}
+
+.t-sun {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.t-sunrise {
+  display: flex;
+  justify-content: center;
+  padding-right: 15px;
+  border-right: 2px solid white;
+}
+
+.t-sunrise img {
+  height: 50px;
+  line-height: 50px;
+  filter: invert(98%) sepia(5%) saturate(605%) hue-rotate(155deg)
+    brightness(117%) contrast(100%);
+}
+
+.t-sunrise p {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.t-sunset {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.t-sunset img {
+  height: 50px;
+  line-height: 50px;
+  filter: invert(98%) sepia(5%) saturate(605%) hue-rotate(155deg)
+    brightness(117%) contrast(100%);
+}
+
+.t-sunset p {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.t-moon {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.t-moonrise {
+  display: flex;
+  justify-content: center;
+  padding-right: 15px;
+  border-right: 2px solid white;
+}
+
+.t-moonrise img {
+  height: 50px;
+  line-height: 50px;
+  filter: invert(98%) sepia(5%) saturate(605%) hue-rotate(155deg)
+    brightness(117%) contrast(100%);
+}
+
+.t-moonrise p {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.t-moonset {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.t-moonset img {
+  height: 50px;
+  line-height: 50px;
+  filter: invert(98%) sepia(5%) saturate(605%) hue-rotate(155deg)
+    brightness(117%) contrast(100%);
+}
+
+.t-moonset p {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .t-weatherbox {
+    width: 100%;
+  }
+  .t-controlbar {
+    width: 100%;
+  }
+}

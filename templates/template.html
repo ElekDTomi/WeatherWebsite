@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta List="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="index.css" />
+    <div class="t-controlbar">
+      <p class="t-welcomemsg">{{ welcomemsg }}</p>
+      <p class="t-time"></p>
+    </div>
+    <div class="t-weatherbox {{ wbg }}"></div>
+    <div class="t-weatherinfo">
+      <p class="t-city">{{ city }}</p>
+      <div class="t-temperaturecontainer">
+        <p class="t-temperature">{{ temp }} °C</p>
+
+        <div class="t-minmax">
+          <p class="t-mintemperature">{{ tempmin }} °C</p>
+          <p class="t-maxtemperature">{{ tempmax }} °C</p>
+        </div>
+      </div>
+      <p class="t-weathertxt">{{ wtext }}</p>
+      <div class="t-etcinfo">
+        <div class="t-humidity">
+          <img class="t-humidityimg" src="icons/humidity.png" />
+          <p class="t-humiditytext">{{ humidity }} %</p>
+        </div>
+        <div class="t-air-pressure">
+          <img class="t-air-pressureimg" src="icons/barometer.png" />
+          <p class="t-air-pressuretext">{{pressure}} hPa</p>
+        </div>
+      </div>
+      <div class="t-sunmoon">
+        <div class="t-sun">
+          <div class="t-sunrise">
+            <img src="icons/sunrise.png" />
+            <p>{{ sunrise }}</p>
+          </div>
+          <div class="t-sunset">
+            <img src="icons/sunset.png" />
+            <p>{{ sunset }}</p>
+          </div>
+        </div>
+        <div class="t-moon">
+          <div class="t-moonrise">
+            <img src="icons/moonrise.png" />
+            <p>{{ moonrise }}</p>
+          </div>
+          <div class="t-moonset">
+            <img src="icons/moonset.png" />
+            <p>{{ moonset }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
